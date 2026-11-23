@@ -69,7 +69,7 @@ odexis is made for Claude Code. The same repository also carries a package for t
 |---|---|---|
 | Antigravity | `agy plugin install https://github.com/korpinar/odexis`, then `/setup` | The skills, the line of facts at the start of a session, and the rules on secret files. |
 | Codex | `codex plugin marketplace add korpinar/odexis`, then `codex plugin add odexis@odexis` and `$odexis:setup` | The skills. |
-| Cursor | Add this repository as a plugin the way Cursor's documentation describes for a GitHub repository; then `/setup` | The skills. |
+| Cursor | `cursor-agent plugin marketplace add https://github.com/korpinar/odexis`, then `/plugins` to install it, and `/setup` | The skills. |
 
 In Codex and Cursor the tool's own approvals take the place of the protections odexis sets up in Claude Code. In Antigravity the rules on secret files hold, and its own approvals cover the rest. Setup says so in each tool. Where odexis has automatic steps (Claude Code and Antigravity), on Windows they need Git Bash, which comes with Git.
 
