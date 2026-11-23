@@ -26,6 +26,6 @@ claude plugin validate plugin
 
 The validators warn that Claude Code's manifest has no version. That is meant: Claude Code then treats every published change as an update.
 
-`plugin/` is the package. The other manifests, in the folders at the top level and in `plugin/`, are what the other tools read; they point at the same skills.
+`plugin/` is the package. The other manifests, in the folders at the top level and in `plugin/`, are what the other tools read; they all use the same skills. `plugin/hooks.json` and `plugin/hooks/run.cmd` are how Antigravity starts the three scripts.
 
 By contributing you agree that your contribution is licensed under the [MIT License](LICENSE).

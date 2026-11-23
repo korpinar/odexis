@@ -14,9 +14,9 @@ fi
 proj="${proj:-$PWD}"
 data="${CLAUDE_PLUGIN_DATA:-$PLUGIN_DATA}"
 status="$proj/odexis/status.md"
-say() { # Antigravity takes the line as a JSON step and starts odexis's commands without the prefix
+say() { # Antigravity takes the line as a JSON step
   if [ "$agy" = 1 ]; then
-    local t="${1//\/odexis:/\/}"; t="${t//[\"\\]/}"
+    local t="${1//[\"\\]/}"
     printf '%s\n' "{\"injectSteps\":[{\"systemMessage\":{\"systemMessage\":\"$t\"}}]}"
   else echo "$1"; fi
 }

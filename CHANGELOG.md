@@ -2,6 +2,15 @@
 
 What changed for someone who uses odexis, newest first. The numbers are those of the releases on this repository's page.
 
+## 1.0.2
+
+### Fixed
+
+- In Antigravity the automatic steps are back and work on Windows in any terminal: they find the Git Bash that comes with Git themselves, and where they cannot they stay off without disturbing the tool.
+- In Antigravity odexis's commands are listed by their short names. Its install address now ends in `/tree/main/plugin`; if you installed it before, uninstall it and install it from that address.
+- Setup's closing card is in your language throughout and names the commands the way your tool starts them.
+- Setup and planning use the tool's own question window in the other tools too, where there is one.
+
 ## 1.0.1
 
 ### Fixed

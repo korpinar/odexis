@@ -1,0 +1,30 @@
+{
+  "odexis": {
+    "SessionStart": [
+      {
+        "type": "command",
+        "command": "\"./hooks/run.cmd\" session-start",
+        "timeout": 10
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "run_command|read_file|view_file",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"./hooks/run.cmd\" shell-read",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "type": "command",
+        "command": "\"./hooks/run.cmd\" stop",
+        "timeout": 10
+      }
+    ]
+  }
+}

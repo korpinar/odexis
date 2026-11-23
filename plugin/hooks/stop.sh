@@ -31,8 +31,7 @@ section="$(awk '/^## /{on=($0 ~ /^## Corrections/)} on' "$status")"
 count=$(printf '%s\n' "$section" | sed '1d' | grep -v '^[[:space:]]*$' | grep -v -c '^[[:space:]]*(none')
 [ "$count" -ge 2 ] || exit 0
 : > "$said" || exit 0
-grow="odexis:grow"; [ "$agy" = 1 ] && grow="grow"
-msg="odexis: the Corrections section of odexis/status.md changed in this conversation and now holds $count corrections. When two of them say the same thing, the $grow skill turns them into a rule; otherwise nothing more is needed."
+msg="odexis: the Corrections section of odexis/status.md changed in this conversation and now holds $count corrections. When two of them say the same thing, the odexis:grow skill turns them into a rule; otherwise nothing more is needed."
 if [ "$agy" = 1 ]; then printf '%s\n' "{\"decision\":\"continue\",\"reason\":\"$msg\"}"
 else printf '%s\n' "{\"hookSpecificOutput\":{\"hookEventName\":\"Stop\",\"additionalContext\":\"$msg\"}}"; fi
 exit 0

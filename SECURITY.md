@@ -2,7 +2,7 @@
 
 ## What odexis runs on your computer
 
-odexis is text for the model (four skills) and three short Bash scripts in `plugin/hooks/`. The scripts read the project's own files and the input the tool hands them, write and tidy only small notes of their own in the tool's data folder for the plugin, and make no network connection. Nothing of odexis is copied into your project except the files setup writes after your yes.
+odexis is text for the model (four skills) and three short Bash scripts in `plugin/hooks/`, with a small launcher beside them that only finds Bash and starts one of the three. The scripts read the project's own files and the input the tool hands them, write and tidy only small notes of their own in the tool's data folder for the plugin, and make no network connection. Nothing of odexis is copied into your project except the files setup writes after your yes.
 
 Like every plugin, odexis runs with your own permissions. Read it before you install it; it is short.
 
