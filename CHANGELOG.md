@@ -2,6 +2,12 @@
 
 What changed for someone who uses odexis, newest first. The numbers are those of the releases on this repository's page.
 
+## 1.0.1
+
+### Fixed
+
+- In Antigravity on Windows the automatic steps could stop the tool's own work. They are no longer installed there; Antigravity gets the skills, as Codex and Cursor do.
+
 ## 1.0.0
 
 ### Added
