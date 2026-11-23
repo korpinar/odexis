@@ -1,0 +1,25 @@
+{
+  "name": "odexis",
+  "version": "1.0.0",
+  "description": "A small director for any project: the thread across conversations, safety, the project's own forms, and rules that grow as the need shows. The model does the work.",
+  "author": {
+    "name": "the odexis authors"
+  },
+  "license": "MIT",
+  "keywords": [
+    "project-memory",
+    "continuity",
+    "safety",
+    "non-technical"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "odexis",
+    "shortDescription": "The thread across conversations, safety, the project's own forms, and rules that grow as the need shows.",
+    "longDescription": "A small director for any project: the thread across conversations, safety, the project's own forms, and rules that grow as the need shows. The model does the work.",
+    "developerName": "the odexis authors",
+    "category": "Productivity",
+    "capabilities": []
+  },
+  "hooks": {}
+}

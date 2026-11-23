@@ -1,0 +1,20 @@
+{
+  "name": "odexis",
+  "interface": {
+    "displayName": "odexis"
+  },
+  "plugins": [
+    {
+      "name": "odexis",
+      "source": {
+        "source": "local",
+        "path": "./plugin"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "odexis",
+  "owner": {
+    "name": "the odexis authors"
+  },
+  "metadata": {
+    "description": "odexis, a small director for any project"
+  },
+  "plugins": [
+    {
+      "name": "odexis",
+      "source": "./",
+      "description": "The thread across conversations, safety, the project's own forms, and rules that grow as the need shows."
+    }
+  ]
+}

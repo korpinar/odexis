@@ -1,0 +1,14 @@
+{
+  "name": "odexis",
+  "owner": {
+    "name": "the odexis authors"
+  },
+  "description": "odexis, a small director for any project in Claude Code",
+  "plugins": [
+    {
+      "name": "odexis",
+      "source": "./plugin",
+      "description": "The thread across conversations, safety, the project's own forms, and rules that grow as the need shows."
+    }
+  ]
+}

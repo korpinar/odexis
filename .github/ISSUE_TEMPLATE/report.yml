@@ -1,0 +1,44 @@
+name: Something did not work
+description: Tell us what you asked for and what happened. Your own words are enough.
+labels: []
+body:
+  - type: dropdown
+    id: tool
+    attributes:
+      label: Which tool do you use odexis in?
+      options:
+        - Claude Code (terminal)
+        - Claude Code (desktop app)
+        - Antigravity
+        - Codex
+        - Cursor
+        - Another tool
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: The tool's version, and your system
+      placeholder: "for example: Claude Code, Windows 11"
+    validations:
+      required: false
+  - type: textarea
+    id: asked
+    attributes:
+      label: What did you ask for?
+      description: The message you wrote, as you wrote it, in any language.
+    validations:
+      required: true
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: more
+    attributes:
+      label: Anything else
+      description: Please leave out passwords, keys and personal details.
+    validations:
+      required: false

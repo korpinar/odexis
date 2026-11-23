@@ -1,0 +1,19 @@
+# Removing odexis from a project
+
+The project keeps working without odexis: its rules, records, settings, skills and Git history all stay.
+
+First read `AGENTS.md`, the header of `odexis/status.md` and `.claude/settings.json`. If odexis's lines are already out of both of the first two (a removal run again), skip steps 1 to 5:
+
+- The settings still have `"odexis@odexis": true` under `enabledPlugins` (the desktop app's removal can leave that entry; a new terminal session then still loads odexis, and the uninstall refuses): say so in plain words and, after a yes, run `claude plugin disable odexis@odexis --scope project` yourself. It turns odexis off for this project and changes nothing else; step 2's rule is about editing the file by hand, which the tool does not let you do. If the command is refused, give it to the user to type. It takes effect in a new conversation: say that odexis's commands are no longer offered there, and that if they still are, the way of step 3 is left.
+- The settings do not turn odexis on: say that nothing is left to remove in this project, and give step 3 in case odexis is still offered in a new conversation.
+
+1. Show the user what goes and what stays, and wait for a yes. The user may not be a developer: every message of the removal is in their language and in plain words, as setup's message is (odexis's own lines in the page of rules and in the notebook go; the rules, the notebook, the protections and the earlier states of the files stay), with the file names and exact lines when they ask for the details.
+   - Goes: the lines of `AGENTS.md` that name an odexis skill or command (its `## odexis` section, and a mention of an odexis skill inside another rule: delete the mention, keep the rule; lines that only name the `odexis/` folder stay; the line on a status file that is "not in front of you", if setup added it in another tool, stays too: the notebook still needs it there) and the `odexis_` fields in the header of `odexis/status.md` (the block between the two `---` lines at the very top of the file; read the file, an import does not show it).
+   - Stays: the two loading lines in `CLAUDE.md`, the rest of `AGENTS.md`, the files in `odexis/`, the ask and deny rules and every other setting, the project's own skills and automatic steps, the Git history.
+2. After the yes, make exactly those edits. Do not edit a settings file. Then search `AGENTS.md` for `odexis:`, `/odexis` and `odexis@odexis` and look at the result: no such line may be left, except one that only names the `odexis/` folder or an address.
+3. Tell the user how to take odexis itself out. Give the app's way first and the typed way after it:
+   - In the desktop app: open the plugins page from the sidebar ("Customize" or "Plugins"; use the names the app shows in the user's language if you know them), find odexis in the list, open the menu at the end of its row, choose the remove entry and confirm. The menu's other entry only turns odexis off and leaves it installed.
+   - In the terminal: type `/plugin uninstall odexis@odexis` and choose "Uninstall for everyone"; "Disable for me" leaves odexis installed for the project.
+   - In a tool other than Claude Code: only that tool's own way of removing a plugin (in Antigravity, `agy plugin uninstall odexis` in a terminal); the commands in the other lines of this file are Claude Code's and are not given there.
+4. Only if the user asks about the source odexis was installed from: the command is `claude plugin marketplace remove odexis --scope project`. Say that without the scope the source is removed everywhere, and that removing it from the last place that names it also uninstalls odexis wherever it was installed from it.
+5. Say how they see that it is gone: a new conversation in this project no longer offers odexis's commands; if it still does, they type `/odexis:setup remove` once more. Leave the tool's own clean-up of its folders alone.
