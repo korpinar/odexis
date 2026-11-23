@@ -2,6 +2,13 @@
 
 What changed for someone who uses odexis, newest first. The numbers are those of the releases on this repository's page.
 
+## 1.0.3
+
+### Fixed
+
+- Setup's closing card no longer keeps some of its phrases in English in a conversation in another language; this showed in Cursor.
+- Setup's message has a line of its own for the list that keeps the usual files for passwords and keys out of what is saved, and no longer names such a file.
+
 ## 1.0.2
 
 ### Fixed

@@ -1,6 +1,6 @@
 {
   "name": "odexis",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A small director for any project: the thread across conversations, safety, the project's own forms, and rules that grow as the need shows. The model does the work.",
   "author": {
     "name": "the odexis authors"

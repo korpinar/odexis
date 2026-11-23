@@ -41,6 +41,7 @@ When the tool offers a question window (a tool of its own for questions with opt
 
 **What I will add**
 - A short page of rules for working on this project, and a notebook that carries where we left off into the next conversation.
+- [only if the project has none yet] A short list that keeps the usual files for passwords and keys out of what is saved.
 - [only if older instructions exist] [What is taken over from them into the page of rules.] One that is no longer needed is removed only if you say so.
 - [only if something that exists gets new lines] [What is added, one plain line each.]
 - [only if the folder keeps no history yet] From now on the folder can keep earlier states of its files, on this computer only.
@@ -93,12 +94,12 @@ Fill the templates in [templates/](templates/) and write only the files that do 
 
 ## 4. Hand over
 
-End with a short card, one line each, of what they can say from now on. The whole card is in the user's language, the phrases in quotes too: they are what the user will say. The two commands are written the way this tool starts them: as below in Claude Code and Antigravity; `/prune` and `/setup remove` in Cursor; `$odexis:prune` and `$odexis:setup remove` in Codex.
+End with a short card, one line each, of what they can say from now on. Every word of the card is in the user's language. A bracket stands for what the user will say: in its place write, in quotes, the words a user would say for it in their language, not the bracket's own English. The two commands are written the way this tool starts them: as below in Claude Code and Antigravity; `/prune` and `/setup remove` in Cursor; `$odexis:prune` and `$odexis:setup remove` in Codex.
 
-- "undo" brings back the earlier state.
-- "where did we leave off" in a new conversation continues from the status file.
-- "always do it this way" makes a lasting rule.
-- "update odexis" updates odexis; the project's files are not touched.
+- [undo] brings back the earlier state.
+- [where did we leave off] in a new conversation continues from the status file.
+- [always do it this way] makes a lasting rule.
+- [update odexis] updates odexis; the project's files are not touched.
 - `/odexis:prune` proposes what can be cleaned up.
 - `/odexis:setup remove` takes odexis's lines out of the project.
 - `/plan` (the tool's own plan mode) is for talking something through before anything changes.
