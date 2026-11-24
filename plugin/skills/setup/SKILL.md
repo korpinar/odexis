@@ -61,6 +61,16 @@ Say "details" to see the names of the files and the exact lines.
 
 - Clashes: if the user's settings already allow something they would be asked about, say that odexis's line would make it ask again and let the user drop that line. If the project settings already set a language or an output style, that value stays; say the difference. If a rule of the user says the opposite of a line you would write, ask which holds; do not write a line against the user's rule.
 - In a tool other than Claude Code: the same files are written, so the project is ready when it is opened in Claude Code, but the settings file is Claude Code's and this tool does not enforce it. Under "What protects you", in Antigravity keep the line on the files for passwords and keys, which odexis's own step applies there, say that it holds for commands and for opening a file, not for a search, and write one line in place of the other two: being asked before work is sent and the block on writing outside the folder are enforced by Claude Code; in this tool its own approvals protect the user. In any other tool write that one line in place of all three, with keeping the files for passwords and keys unread named in it as the third thing Claude Code enforces. Leave the line on one more layer out. In the start file's line on the two commands only the user starts, write them the way this tool starts them (step 4 has the forms; setup itself is `/setup` in Cursor and `$odexis:setup` in Codex). In step 3, also on a second run, add this line to the "Records" section of `AGENTS.md`, after the line on the status file, if it is not there, and name it in the message with one plain line under "What I will add" (a line in the page of rules, so that the notebook is read and kept current in this tool): `- If the status file is not in front of you at the start of a conversation (a tool that does not load it): read it before a piece of work, and when the work is done write where things stand under "Where we left off".`
+  When setup writes the start file in Codex, Antigravity or Cursor, or adds the `## odexis` section to one that exists, its line on "update odexis" is this tool's line below, in place of the template's; a line on "update odexis" that is already there is kept.
+
+  ```markdown
+  Codex:
+  - "update odexis": run `codex plugin marketplace upgrade odexis` and suggest a new conversation.
+  Antigravity:
+  - "update odexis": run `agy plugin install` again with the address odexis was installed from (ask the user for it if you do not know it) and suggest a new conversation.
+  Cursor:
+  - "update odexis": read odexis's address from `cursor-agent plugin marketplace list`, run `cursor-agent plugin marketplace remove odexis` and then `cursor-agent plugin marketplace add` with that address, and ask the user to install odexis again from `/plugins` in a new conversation.
+  ```
 - Details, when asked: each file you will create and, for each file that exists, exactly what you will add to it, including the lines `.env`, `.env.*` and `secrets/` in `.gitignore`; the `ask` and `deny` rules of [templates/settings.template.json](templates/settings.template.json); the Git steps of step 3.
 
 An answer counts only for the question it was given to; a decision without an answer is asked again, never assumed. Write nothing until the user has said yes to writing. Their yes covers what the message showed.
@@ -94,8 +104,12 @@ Fill the templates in [templates/](templates/) and write only the files that do 
 
 ## 4. Hand over
 
-End with a short card, one line each, of what they can say from now on. Every word of the card is in the user's language. A bracket stands for what the user will say: in its place write, in quotes, the words a user would say for it in their language, not the bracket's own English. The two commands are written the way this tool starts them: as below in Claude Code and Antigravity; `/prune` and `/setup remove` in Cursor; `$odexis:prune` and `$odexis:setup remove` in Codex.
+The reply after the writing is the form below and nothing else: no list of the files written and no account of the Git steps. Every word of it is in the user's language. In the card a bracket stands for what the user will say: in its place write, in quotes, the words a user would say for it in their language, not the bracket's own English. The two commands are written the way this tool starts them: as below in Claude Code and Antigravity; `/prune` and `/setup remove` in Cursor; `$odexis:prune` and `$odexis:setup remove` in Codex.
 
+```markdown
+[One sentence: odexis is set up in this project.] [only if something could not be written or saved] [What, and what the user can do about it.]
+
+**What you can say from now on**
 - [undo] brings back the earlier state.
 - [where did we leave off] in a new conversation continues from the status file.
 - [always do it this way] makes a lasting rule.
@@ -103,3 +117,4 @@ End with a short card, one line each, of what they can say from now on. Every wo
 - `/odexis:prune` proposes what can be cleaned up.
 - `/odexis:setup remove` takes odexis's lines out of the project.
 - `/plan` (the tool's own plan mode) is for talking something through before anything changes.
+```

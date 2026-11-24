@@ -2,6 +2,14 @@
 
 What changed for someone who uses odexis, newest first. The numbers are those of the releases on this repository's page.
 
+## 1.0.4
+
+### Fixed
+
+- A project set up in Codex, Antigravity or Cursor gets that tool's own way of updating odexis in its page of rules; before, it got Claude Code's command. A project set up earlier keeps its line; the README's section on other tools has each tool's way.
+- Pruning and removal in Antigravity, Codex or Cursor no longer suggest commands that only Claude Code has, such as `/doctor`.
+- Setup's closing reply is short and ends with the card of what you can say from now on; with a small model the card was sometimes cut short or missing, behind a long account of the files written.
+
 ## 1.0.3
 
 ### Fixed

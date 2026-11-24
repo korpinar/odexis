@@ -73,6 +73,8 @@ odexis is made for Claude Code. The same repository also carries a package for t
 
 In Codex and Cursor the tool's own approvals take the place of the protections odexis sets up in Claude Code. In Antigravity the rules on secret files hold for commands and for opening a file, and its own approvals cover the rest. Setup says so in each tool. Where odexis has automatic steps (Claude Code and Antigravity), on Windows they need Git Bash, which comes with Git; in Antigravity they find it themselves and stay off where it is missing.
 
+To update odexis there: in Antigravity run the install command again; in Codex run `codex plugin marketplace upgrade odexis`; in Cursor run `cursor-agent plugin marketplace remove odexis`, add the marketplace again and install odexis again from `/plugins`. Then start a new conversation. A project set up there with release 1.0.4 or later has this in its page of rules, so you can say "update odexis" and the model takes you through it.
+
 ## Good to know
 
 - The rules that ask before sending and that keep secret files unread catch the usual ways, not every possible one.
