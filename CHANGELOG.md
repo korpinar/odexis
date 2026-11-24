@@ -2,6 +2,14 @@
 
 What changed for someone who uses odexis, newest first. The numbers are those of the releases on this repository's page.
 
+## 1.0.5
+
+### Fixed
+
+- In Antigravity, Codex and Cursor a rule, skill or helper the project gains ("always do it this way") is written where that tool reads it; before, it went into Claude Code's folders, where the other tool might never read it. Pruning looks in each tool's folders and proposes a copy for what lies where your tool does not read it.
+- A yes to short answers at setup now has an effect in Antigravity, Codex and Cursor too: it becomes a line in the page of rules.
+- Removal names each tool's own way of taking the plugin out, and says when the project still turns odexis on for Claude Code.
+
 ## 1.0.4
 
 ### Fixed

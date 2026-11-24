@@ -63,7 +63,7 @@ Stopping and removing are in your hands. `/odexis:setup remove` shows what would
 
 ## Other tools
 
-odexis is made for Claude Code. The same repository also carries a package for three other tools, with the same skills and the same project files.
+odexis is made for Claude Code. The same repository also carries a package for three other tools, with the same skills and the same project files; a rule or skill the project gains there is written where that tool reads it.
 
 | Tool | Install | What you get |
 |---|---|---|
