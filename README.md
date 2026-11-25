@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-    <img src="assets/banner-light.svg" width="880" alt="odexis. A new conversation continues where the last one stopped. A format you approved stays. With your yes every change is saved, and one you regret can be brought back.">
+    <img src="assets/banner-light.svg" width="600" alt="odexis. A new conversation continues where the last one stopped.">
   </picture>
 </p>
 
@@ -12,7 +12,7 @@ odexis is a plugin for Claude Code. It also runs in Antigravity, Codex and Curso
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/conversation-dark.svg">
-    <img src="assets/conversation-light.svg" width="760" alt="A new conversation with odexis. The question and the reply are written out below.">
+    <img src="assets/conversation-light.svg" width="600" alt="A new conversation with odexis. The question and the reply are written out below.">
   </picture>
 </p>
 
