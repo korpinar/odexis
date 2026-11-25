@@ -61,7 +61,8 @@ Setup asks its three short questions, then tells you what it understood and what
 - "undo" to bring back the earlier state,
 - "where did we leave off" in a new conversation,
 - "always do it this way" to make a lasting rule,
-- "update odexis" to get the newest odexis.
+- "update odexis" to get the newest odexis,
+- "report this to odexis" when something of odexis did not work.
 
 `/odexis:prune` proposes what can be cleaned up. `/plan`, the tool's own plan mode, is for talking something through before anything changes.
 
@@ -69,7 +70,7 @@ Like every plugin, odexis runs with your own permissions on your computer, and w
 
 ## What it is
 
-odexis is four skills and three small automatic steps. Nothing owned by odexis lives in your project. Setup writes a first form of a few files (`AGENTS.md`, two lines in `CLAUDE.md`, `odexis/status.md`, `odexis/decisions.md`, `.claude/settings.json`, and lines for secret files in `.gitignore`), with the exact lines shown when you ask for the details, and from then on they are yours. Updating odexis never touches your project's files.
+odexis is five skills and three small automatic steps. Nothing owned by odexis lives in your project. Setup writes a first form of a few files (`AGENTS.md`, two lines in `CLAUDE.md`, `odexis/status.md`, `odexis/decisions.md`, `.claude/settings.json`, and lines for secret files in `.gitignore`), with the exact lines shown when you ask for the details, and from then on they are yours. Updating odexis never touches your project's files.
 
 | Part | Who starts it |
 |---|---|
@@ -77,6 +78,7 @@ odexis is four skills and three small automatic steps. Nothing owned by odexis l
 | `/odexis:prune` | You |
 | Planning a large or unclear job | The model, when the work calls for it |
 | Growing a rule, a form or a skill | The model, when a correction or a format repeats |
+| Preparing a report to odexis's makers | The model, when you ask for it |
 | One line of facts at the start of a session | The tool |
 | One fact when a correction may have come twice | The tool |
 | The project's rules on secret files applied to shell commands too | The tool |
@@ -99,9 +101,9 @@ odexis is made for Claude Code. The same repository also carries a package for t
 | Codex | `codex plugin marketplace add korpinar/odexis`, then `codex plugin add odexis@odexis` and `$odexis:setup` | The skills. |
 | Cursor | `cursor-agent plugin marketplace add https://github.com/korpinar/odexis`, then `/plugins` to install it, and `/setup` | The skills. |
 
-In Codex and Cursor the tool's own approvals take the place of the protections odexis sets up in Claude Code. In Antigravity the rules on secret files hold for commands and for opening a file, and its own approvals cover the rest. Setup says so in each tool. Where odexis has automatic steps (Claude Code and Antigravity), on Windows they need Git Bash, which comes with Git; in Antigravity they find it themselves and stay off where it is missing.
+In Codex and Cursor the tool's own approvals take the place of the protections odexis sets up in Claude Code. In Antigravity the rules on secret files hold for commands and for opening a file, and its own approvals cover the rest. Setup says so in each tool. Where odexis has automatic steps (Claude Code and Antigravity), on Windows they need Git Bash, which comes with Git; where it is missing they stay off and the tool works as it does without them.
 
-To update odexis there: in Antigravity run the install command again; in Codex run `codex plugin marketplace upgrade odexis`; in Cursor run `cursor-agent plugin marketplace remove odexis`, add the marketplace again and install odexis again from `/plugins`. Then start a new conversation. A project set up there with release 1.0.4 or later has this in its page of rules, so you can say "update odexis" and the model takes you through it.
+To update odexis there: in Antigravity run the install command again; Codex updates odexis by itself when its interactive program is started and a new release is out (if a copy stays old, run `codex plugin marketplace upgrade odexis`); in Cursor run `cursor-agent plugin marketplace remove odexis`, add the marketplace again and install odexis again from `/plugins`. Then start a new conversation. A project set up there with release 1.0.4 or later has this in its page of rules, so you can say "update odexis" and the model takes you through it.
 
 ## Good to know
 
@@ -110,7 +112,7 @@ To update odexis there: in Antigravity run the install command again; in Codex r
 
 ## Feedback
 
-Something did not work, or read oddly? Open an issue at [https://github.com/korpinar/odexis/issues](https://github.com/korpinar/odexis/issues) and say which tool you use, what you asked for, and what happened. See [CONTRIBUTING.md](CONTRIBUTING.md) for changes, [SECURITY.md](SECURITY.md) for a security problem, and [CHANGELOG.md](CHANGELOG.md) for what changed between releases.
+Something did not work, or read oddly? Say "report this to odexis" in the conversation where it happened. The model writes the report, takes out names, e-mail addresses, phone numbers, folder paths and keys, shows you the exact text, and after your yes gives you a link that opens the filled form; it sends nothing itself, and nothing is sent until you press the button on that page. Or open an issue yourself at [https://github.com/korpinar/odexis/issues](https://github.com/korpinar/odexis/issues) and say which tool you use, what you asked for, and what happened. See [CONTRIBUTING.md](CONTRIBUTING.md) for changes, [SECURITY.md](SECURITY.md) for a security problem, and [CHANGELOG.md](CHANGELOG.md) for what changed between releases.
 
 ## License
 

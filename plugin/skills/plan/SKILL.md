@@ -14,10 +14,11 @@ The plan is the one approval for this work. Until the user approves it, change n
    - The done criterion: something that can be checked, such as a command, a format rule or a number a script produces.
    - The items in order, each with its own short done criterion. For a large project: the list of stages, and the items of the first stage only.
    - The decisions taken in the interview, one line each.
+   - Your own large choices that the user was not asked about (the medium, the tools, a cost the user did not set, anything hard to change later), apart from the user's decisions, one plain line each with its reason: they are your calls, not something the user agreed to.
 
    End by asking for the approval.
 4. **After the approval.**
    - Write the plan into "Open work" in `odexis/status.md`: one line for the expected result, then the items as `- [ ] <item>. Done: <criterion>.`, in place of a `(none)` line. There is no separate plan file.
-   - Write the decisions taken into `odexis/decisions.md`.
+   - Write the decisions taken into `odexis/decisions.md`, your own choices among them marked as yours.
    - Suggest a new conversation for the build; the status file carries the plan there.
 5. **As the work moves.** Check each finished item against its criterion, then delete it from the status file. When a stage ends, write the next stage's items and tell the user; a new approval is needed only if the expected result changes.

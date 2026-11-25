@@ -1,7 +1,7 @@
 {
   "name": "odexis",
-  "version": "1.0.6",
-  "description": "A small director for any project: the thread across conversations, safety, the project's own forms, and rules that grow as the need shows. The model does the work.",
+  "version": "1.0.7",
+  "description": "A small director for any project: the thread across conversations, safety, the project's own forms, rules that grow as the need shows. The model does the work.",
   "author": {
     "name": "the odexis authors"
   },
@@ -16,7 +16,7 @@
   "interface": {
     "displayName": "odexis",
     "shortDescription": "The thread across conversations, safety, the project's own forms, and rules that grow as the need shows.",
-    "longDescription": "A small director for any project: the thread across conversations, safety, the project's own forms, and rules that grow as the need shows. The model does the work.",
+    "longDescription": "A small director for any project: the thread across conversations, safety, the project's own forms, rules that grow as the need shows. The model does the work.",
     "developerName": "the odexis authors",
     "category": "Productivity",
     "capabilities": []

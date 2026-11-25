@@ -2,6 +2,19 @@
 
 What changed for someone who uses odexis, newest first: what is new, then what was fixed, then anything you need to do. The numbers and dates are those of the releases on this repository's page.
 
+## 1.0.7 (2026-11-25)
+
+### New
+
+- "Report this to odexis": say it when something of odexis did not work. The model writes the report from the conversation, takes out names, e-mail addresses, phone numbers, folder paths and keys, shows you the exact text, and after your yes gives a link that opens the filled report form. It sends nothing itself.
+- A plan shows apart the larger choices the model made itself, one line each with its reason, so that they are not taken for something you decided.
+- Codex updates odexis by itself when its interactive program is started and a new release is out. The README and the page of rules of a project set up there now say so; before, they gave a command to type.
+
+### Fixed
+
+- In Claude Code on Windows without Git Bash, odexis's three automatic steps no longer end in an error. There the tool runs a step in PowerShell, where it failed each time, and by the tool's own rule for such a computer a step that fails before a command can block that command. The steps now stay off there and the tool works as it does without them.
+- In Antigravity on Windows the launcher of the steps takes `where` and `git` from the system's path only, never from the folder it is started in, and looks into a per-user folder only when Windows names one.
+
 ## 1.0.6 (2026-11-25)
 
 ### New

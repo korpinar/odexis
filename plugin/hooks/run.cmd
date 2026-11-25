@@ -4,14 +4,17 @@ rem odexis, launcher of the three steps for Antigravity, which starts a step thr
 rem Windows and through sh elsewhere. This file is read by both. On Windows it finds Git Bash
 rem itself (an ordinary terminal has git on its path, not bash; a bash found on the path may be
 rem another system's) and is silent when it cannot: without Git Bash the steps do not run.
+rem "where" is called by its full path and searches the path only, so that neither it nor git
+rem is taken from the folder the step runs in; a folder named by a variable is looked at only
+rem when the variable is set (unset, the path would start at the root of the current drive).
 setlocal
 set "B="
-for /f "delims=" %%G in ('where git 2^>nul') do if not defined B if exist "%%~dpG..\bin\bash.exe" set "B=%%~dpG..\bin\bash.exe"
-for /f "delims=" %%G in ('where git 2^>nul') do if not defined B if exist "%%~dpG..\..\bin\bash.exe" set "B=%%~dpG..\..\bin\bash.exe"
-if not defined B if exist "%ProgramFiles%\Git\bin\bash.exe" set "B=%ProgramFiles%\Git\bin\bash.exe"
-if not defined B if exist "%ProgramFiles(x86)%\Git\bin\bash.exe" set "B=%ProgramFiles(x86)%\Git\bin\bash.exe"
-if not defined B if exist "%LocalAppData%\Programs\Git\bin\bash.exe" set "B=%LocalAppData%\Programs\Git\bin\bash.exe"
-if not defined B if exist "%UserProfile%\scoop\apps\git\current\bin\bash.exe" set "B=%UserProfile%\scoop\apps\git\current\bin\bash.exe"
+if defined SystemRoot for /f "delims=" %%G in ('"%SystemRoot%\System32\where.exe" $PATH:git 2^>nul') do if not defined B if exist "%%~dpG..\bin\bash.exe" set "B=%%~dpG..\bin\bash.exe"
+if defined SystemRoot for /f "delims=" %%G in ('"%SystemRoot%\System32\where.exe" $PATH:git 2^>nul') do if not defined B if exist "%%~dpG..\..\bin\bash.exe" set "B=%%~dpG..\..\bin\bash.exe"
+if not defined B if defined ProgramFiles if exist "%ProgramFiles%\Git\bin\bash.exe" set "B=%ProgramFiles%\Git\bin\bash.exe"
+if not defined B if defined ProgramFiles(x86) if exist "%ProgramFiles(x86)%\Git\bin\bash.exe" set "B=%ProgramFiles(x86)%\Git\bin\bash.exe"
+if not defined B if defined LocalAppData if exist "%LocalAppData%\Programs\Git\bin\bash.exe" set "B=%LocalAppData%\Programs\Git\bin\bash.exe"
+if not defined B if defined UserProfile if exist "%UserProfile%\scoop\apps\git\current\bin\bash.exe" set "B=%UserProfile%\scoop\apps\git\current\bin\bash.exe"
 if not defined B exit /b 0
 if not exist "%~dp0%~1.sh" exit /b 0
 "%B%" "%~dp0%~1.sh"

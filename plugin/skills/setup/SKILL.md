@@ -66,7 +66,7 @@ Say "details" to see the names of the files and the exact lines.
 
   ```markdown
   Codex:
-  - "update odexis": run `codex plugin marketplace upgrade odexis` and suggest a new conversation.
+  - "update odexis": Codex updates odexis by itself when it is started: suggest closing Codex and opening it again; if the copy is still the old one, run `codex plugin marketplace upgrade odexis`.
   Antigravity:
   - "update odexis": run `agy plugin install` again with the address odexis was installed from (ask the user for it if you do not know it) and suggest a new conversation.
   Cursor:
@@ -115,6 +115,7 @@ The reply after the writing is the form below and nothing else: no list of the f
 - [where did we leave off] in a new conversation continues from the status file.
 - [always do it this way] makes a lasting rule.
 - [update odexis] updates odexis; the project's files are not touched.
+- [report this to odexis] prepares a report of something of odexis that did not work; you see it first and send it yourself.
 - `/odexis:prune` proposes what can be cleaned up.
 - `/odexis:setup remove` takes odexis's lines out of the project.
 - `/plan` (the tool's own plan mode) is for talking something through before anything changes.
