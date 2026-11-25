@@ -1,50 +1,82 @@
 # Changelog
 
-What changed for someone who uses odexis, newest first. The numbers are those of the releases on this repository's page.
+What changed for someone who uses odexis, newest first: what is new, then what was fixed, then anything you need to do. The numbers and dates are those of the releases on this repository's page.
 
-## 1.0.5
+## 1.0.6 (2026-11-25)
+
+### New
+
+- This repository's page shows odexis at work: a picture and a before/after example, in the words of real sessions.
 
 ### Fixed
 
-- In Antigravity, Codex and Cursor a rule, skill or helper the project gains ("always do it this way") is written where that tool reads it; before, it went into Claude Code's folders, where the other tool might never read it. Pruning looks in each tool's folders and proposes a copy for what lies where your tool does not read it.
-- A yes to short answers at setup now has an effect in Antigravity, Codex and Cursor too: it becomes a line in the page of rules.
+- In Claude Code a reply at the start of a conversation no longer ends with a needless note about pruning. Session start named the model at the last prune and left the comparison to the model, which passed it on in many replies although nothing had changed. The model at the last prune is now named only where the tool gives this session's model; a prune older than three months is still said.
+
+## 1.0.5 (2026-11-24)
+
+### New
+
+- In Antigravity, Codex and Cursor, a rule, skill or helper the project gains ("always do it this way") is written where that tool reads it. Before, it went into Claude Code's folders, where the other tool might never read it.
+- A yes to short answers at setup has an effect in those three tools too: it becomes a line in the page of rules. Before, it had none there.
+- Pruning looks in each tool's folders and proposes a copy for what lies where your tool does not read it.
+
+### Fixed
+
 - Removal names each tool's own way of taking the plugin out, and says when the project still turns odexis on for Claude Code.
 
-## 1.0.4
+### What you need to do
+
+- If your project gained a rule or skill in Antigravity, Codex or Cursor before this release, it went into Claude Code's folders. Start pruning once: it proposes the copy.
+
+## 1.0.4 (2026-11-24)
+
+### New
+
+- "update odexis" works in Codex, Antigravity and Cursor: a project set up there gets that tool's own way of updating in its page of rules. Before, it got Claude Code's command.
 
 ### Fixed
 
-- A project set up in Codex, Antigravity or Cursor gets that tool's own way of updating odexis in its page of rules; before, it got Claude Code's command. A project set up earlier keeps its line; the README's section on other tools has each tool's way.
 - Pruning and removal in Antigravity, Codex or Cursor no longer suggest commands that only Claude Code has, such as `/doctor`.
-- Setup's closing reply is short and ends with the card of what you can say from now on; with a small model the card was sometimes cut short or missing, behind a long account of the files written.
+- Setup's closing reply is short and ends with the card of what you can say from now on. With a small model the card was sometimes cut short or missing, behind a long account of the files written.
 
-## 1.0.3
+### What you need to do
+
+- A project set up in one of those tools before this release keeps Claude Code's update command in its page of rules. The README's section on other tools has each tool's way.
+
+## 1.0.3 (2026-11-23)
 
 ### Fixed
 
-- Setup's closing card no longer keeps some of its phrases in English in a conversation in another language; this showed in Cursor.
+- Setup's closing card no longer keeps some of its phrases in English in a conversation in another language. This showed in Cursor.
 - Setup's message has a line of its own for the list that keeps the usual files for passwords and keys out of what is saved, and no longer names such a file.
 
-## 1.0.2
+## 1.0.2 (2026-11-23)
+
+### New
+
+- In Antigravity the automatic steps, taken out in 1.0.1, are back and work on Windows in any terminal. They find the Git Bash that comes with Git themselves, and where they cannot they stay off without disturbing the tool.
+- In Antigravity odexis's commands are listed by their short names.
+- Setup and planning use the tool's own question window in the other tools too, where there is one.
 
 ### Fixed
 
-- In Antigravity the automatic steps are back and work on Windows in any terminal: they find the Git Bash that comes with Git themselves, and where they cannot they stay off without disturbing the tool.
-- In Antigravity odexis's commands are listed by their short names. Its install address now ends in `/tree/main/plugin`; if you installed it before, uninstall it and install it from that address.
 - Setup's closing card is in your language throughout and names the commands the way your tool starts them.
-- Setup and planning use the tool's own question window in the other tools too, where there is one.
 
-## 1.0.1
+### What you need to do
+
+- In Antigravity the install address now ends in `/tree/main/plugin`. If you installed odexis there before, uninstall it and install it from that address.
+
+## 1.0.1 (2026-11-23)
 
 ### Fixed
 
 - In Antigravity on Windows the automatic steps could stop the tool's own work. They are no longer installed there; Antigravity gets the skills, as Codex and Cursor do.
 
-## 1.0.0
+## 1.0.0 (2026-11-23)
 
-### Added
+### New
 
-- The project's rules on files that are not to be read now hold for shell commands too.
+- The project's rules on files that are not to be read hold for shell commands too.
 - A report compiled from sources for you to decide on is checked against its sources before you are told what it says.
 - odexis also runs in Antigravity, Codex and Cursor.
 - A change log, pages on contributing and on security, and templates for issues and pull requests.

@@ -1,19 +1,47 @@
-# odexis
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+    <img src="assets/banner-light.svg" width="880" alt="odexis. A new conversation continues where the last one stopped. A format you approved stays. With your yes every change is saved, and one you regret can be brought back.">
+  </picture>
+</p>
 
-**A small director for a project you build with an AI coding tool.** You say what you want, look at the result, approve or correct it, and decide what cannot be undone. The model does the work. odexis keeps four things steady while it does.
-
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+**With odexis a new conversation continues where the last one stopped, a format you approved stays the same, and with your permission every change is saved, so one you regret can be brought back.** You say what you want, look at the result and decide. The model does the work. You do not have to be a developer, and the project does not have to be code.
 
 odexis is a plugin for Claude Code. It also runs in Antigravity, Codex and Cursor: see [Other tools](#other-tools).
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/conversation-dark.svg">
+    <img src="assets/conversation-light.svg" width="760" alt="A new conversation with odexis. The question and the reply are written out below.">
+  </picture>
+</p>
+
+## Before and after
+
+Someone works on a cafe's menu. In one conversation they ask for a description under every dessert and say what comes next: a seasonal drinks section, with the pumpkin latte at 6.50. Later they open a new conversation and ask: "Where did we leave off?"
+
+**Without odexis**, in a copy of the same files where odexis was never set up, the reply begins:
+
+> I don't have memory of an earlier session, so this comes from the repo.
+
+**With odexis**, the whole reply:
+
+> Last session (2026-11-25) every dessert in `menu/desserts.md` got a one-line description.
+>
+> Open work: add `menu/seasonal-drinks.md` with the pumpkin latte at 6.50. It's done when the file exists and lists the pumpkin latte at 6.50. Nothing has been started on it yet.
+>
+> There are no corrections on file.
+
+These are the words of real sessions in an example project, not edited. In your project the reply will be about your own work.
+
 ## What it keeps steady
 
-- **The thread.** A new conversation continues where the last one stopped.
+- **The thread.** A new conversation continues where the last one stopped: what was done, what is open and what you corrected are on record.
 - **Safety.** In Claude Code the tool asks you before work that others can see (sending, publishing), secret files are not read, the file tools cannot write outside the project, and with your permission every change is saved in Git and can be brought back.
 - **Form.** A format you approved stays the same, on the first page and on the ninety-ninth.
 - **Growth.** The project gains its own rules and skills as the need shows, and what no longer helps is pruned.
 
-The project does not have to be code. It can be a thesis, a menu, a site, an exam or a workbook. You do not have to be a developer: setup speaks in plain words and asks three short questions.
+The project can be a thesis, a menu, a site, an exam or a workbook. Setup speaks in plain words and asks three short questions.
 
 ## Quick start
 

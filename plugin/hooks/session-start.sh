@@ -79,12 +79,10 @@ else
   # The tool does not always give the model name; a suffix such as [1m] is not part of it.
   model="$(printf '%s' "$input" | sed -n -E 's/.*"(model|modelName)"[[:space:]]*:[[:space:]]*"([^"]*)".*/\2/p' | head -n 1 | sed 's/\[.*$//')"
   [ "$model" = auto ] && model=""   # Antigravity's name for "the tool chooses": not a model
-  if [ -n "$pmodel" ]; then
-    if [ -z "$model" ]; then
-      out="$out The model at the last prune was $pmodel; if that is not this session's model, it is worth telling the user once: /odexis:prune is started by the user."
-    elif [ "$model" != "$pmodel" ]; then
-      out="$out This session's model is $model; the model at the last prune was $pmodel. This is worth telling the user once: /odexis:prune is started by the user."
-    fi
+  # Without this session's model nothing can be compared here, and nothing is said: a sentence that
+  # left the comparison to the model was passed on to the user although nothing had changed.
+  if [ -n "$pmodel" ] && [ -n "$model" ] && [ "$model" != "$pmodel" ]; then
+    out="$out This session's model is $model; the model at the last prune was $pmodel. This is worth telling the user once: /odexis:prune is started by the user."
   fi
 fi
 say "$out"
